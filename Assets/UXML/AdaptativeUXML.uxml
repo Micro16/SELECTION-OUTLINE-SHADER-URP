@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:Label tabindex="-1" text="Inputs :" parse-escape-sequences="true" display-tooltip-when-elided="true" />
+    <ui:FloatField label="Thickness" value="5" binding-path="m_Thickness" name="Thickness" style="margin-top: 10px;" />
+    <ui:IntegerField label="Precision" value="10" name="Precision" binding-path="m_Precision" style="margin-top: 10px;" />
+    <ui:Slider label="Depth" high-value="1" binding-path="m_Depth" name="Depth" style="margin-top: 10px;" />
+    <ui:FloatField value="42,2" readonly="true" label="Depth value" binding-path="m_Depth" style="width: auto; left: auto; margin-top: 10px;" />
+    <ui:Label tabindex="-1" text="Computed Thickness :" parse-escape-sequences="true" display-tooltip-when-elided="true" style="margin-top: 20px;" />
+    <ui:FloatField value="4.568" focusable="true" readonly="true" is-delayed="false" binding-path="m_ComputedThickness" style="margin-left: 4px; margin-right: 4px; justify-content: flex-start; align-self: center; margin-top: 10px;" />
+</ui:UXML>

@@ -1,5 +1,38 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8499012732076603772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63416b3f2d53cdf46bbe28fcc47b2ae6, type: 3}
+  m_Name: BlitRendererFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  m_RenderPassEvent: 550
+  m_Material: {fileID: 2100000, guid: 35f07a2ddb3feb846ae21dff66277dc8, type: 2}
+--- !u!114 &-7870029662908503719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0280dde9f16bb0e42afde473ecd45f7c, type: 3}
+  m_Name: SelectionRendererFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    selectionLayerMask:
+      serializedVersion: 2
+      m_Bits: 64
+    outlinesAlwaysVisible: 1
 --- !u!114 &-1878332245247344467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53,9 +86,9 @@ MonoBehaviour:
     hdrDebugViewPS: {fileID: 4800000, guid: 573620ae32aec764abd4d728906d2587, type: 3}
   m_RendererFeatures:
   - {fileID: -1878332245247344467}
-  - {fileID: 5095709495277961557}
-  - {fileID: 3533007932126527062}
-  m_RendererFeatureMap: adc0de57c6d2eee555c1a0a8c998b74656fe09dffec30731
+  - {fileID: -7870029662908503719}
+  - {fileID: -8499012732076603772}
+  m_RendererFeatureMap: adc0de57c6d2eee559298d02b809c89284460d2bf3700d8a
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
@@ -98,37 +131,3 @@ MonoBehaviour:
   m_CopyDepthMode: 0
   m_AccurateGbufferNormals: 0
   m_IntermediateTextureMode: 1
---- !u!114 &3533007932126527062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63416b3f2d53cdf46bbe28fcc47b2ae6, type: 3}
-  m_Name: BlitRendererFeature
-  m_EditorClassIdentifier: 
-  m_Active: 1
-  m_RenderPassEvent: 550
-  m_Material: {fileID: 2100000, guid: 35f07a2ddb3feb846ae21dff66277dc8, type: 2}
---- !u!114 &5095709495277961557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0280dde9f16bb0e42afde473ecd45f7c, type: 3}
-  m_Name: OutlineRenderPassFeature
-  m_EditorClassIdentifier: 
-  m_Active: 1
-  settings:
-    renderEvent: 150
-    layerMask:
-      serializedVersion: 2
-      m_Bits: 64
-    colorTargetDestinationID: _Selection

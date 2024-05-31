@@ -25,7 +25,7 @@ public class OutlineShaderCustomEditor : ShaderGUI
         /// Setup title 
         GUIStyle style = new GUIStyle();
         style.normal.textColor = Color.white;
-        style.fontSize = 16;
+        style.fontSize = 14;
         style.padding.left = 0;
         EditorGUILayout.LabelField("Settings", style);
 

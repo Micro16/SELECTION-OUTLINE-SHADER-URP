@@ -37,6 +37,8 @@ public class OutlineShaderCustomEditor : ShaderGUI
         /// Setup outline thickness field
         float thickness = EditorGUILayout.FloatField("Outline Thickness", material.GetFloat("_OutlineThickness"));
 
+        // EditorGUILayout.ColorField()
+
 
         /// Setup scale with depth toggle
         bool scaleWithDepth = EditorGUILayout.Toggle("Scale with Depth", Convert.ToBoolean(material.GetFloat("_ScaleWithDepth")));

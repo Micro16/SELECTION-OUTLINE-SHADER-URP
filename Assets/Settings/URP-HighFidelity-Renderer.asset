@@ -19,7 +19,7 @@ MonoBehaviour:
       m_Bits: 64
     selectionAlwaysVisible: 1
     renderPassEvent: 550
-    blitMaterial: {fileID: 2100000, guid: d8e14bdc46dc468448584895c7f32769, type: 2}
+    blitMaterial: {fileID: 2100000, guid: 69e575ba21a2f224e8ab749187ea70d3, type: 2}
 --- !u!114 &-1878332245247344467
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,9 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_DepthTest
-  m_Shader: {fileID: -6465566751694194690, guid: 9a4e3f9b6d439bd43900645f9bf5148e,
-    type: 3}
+  m_Name: Selection_Outline
+  m_Shader: {fileID: 4800000, guid: 6318209155e4003469fa545f49377c71, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -23,20 +22,13 @@ Material:
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs:
-    - unity_Lightmaps:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_LightmapsInd:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_ShadowMasks:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+    m_TexEnvs: []
     m_Ints: []
-    m_Floats: []
-    m_Colors: []
+    m_Floats:
+    - _MaxDepth: 0.038
+    - _MinThickness: 2
+    - _OutlineThickness: 8
+    - _ScaleWithDepth: 1
+    m_Colors:
+    - _OutlineColor: {r: 0.9945347, g: 1, b: 0, a: 1}
   m_BuildTextureStacks: []

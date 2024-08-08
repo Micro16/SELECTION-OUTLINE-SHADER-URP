@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Unlit_DepthDraw
-  m_Shader: {fileID: 4800000, guid: 2d91ccbd3f672b34ab31daddc2e21cc9, type: 3}
+  m_Name: Blit
+  m_Shader: {fileID: 4800000, guid: bf4799a0278398f4784eef069b4dd2d5, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -24,11 +24,6 @@ Material:
     serializedVersion: 3
     m_TexEnvs: []
     m_Ints: []
-    m_Floats:
-    - _MaxDepth: 0.055
-    - _MinThickness: 2
-    - _OutlineThickness: 10
-    - _ScaleWithDepth: 1
-    m_Colors:
-    - _OutlineColor: {r: 1, g: 0.93547094, b: 0, a: 1}
+    m_Floats: []
+    m_Colors: []
   m_BuildTextureStacks: []

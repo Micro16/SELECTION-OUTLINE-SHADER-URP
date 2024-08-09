@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
-using static UnityEditor.Rendering.CameraUI;
-using static UnityEngine.Rendering.DebugUI;
 
 #if UNITY_6000_0_OR_NEWER
 
@@ -648,7 +646,7 @@ public class OutlineRendererFeature : ScriptableRendererFeature
 
 
             /// Reallocation of the render texture if needed 
-            RenderingUtils.ReAllocateIfNeeded(ref m_TargetRenderTextureHandle, descriptor, name: m_TargetRenderTextureID);
+            RenderingUtils.ReAllocateIfNeeded(ref m_TargetRenderTextureHandle, descriptor, name: m_TargetRenderTextureID, wrapMode: TextureWrapMode.Clamp);
 
 
             /// If the outline must always be visible or if we are rendering depth datas there's no need to attach depth datas

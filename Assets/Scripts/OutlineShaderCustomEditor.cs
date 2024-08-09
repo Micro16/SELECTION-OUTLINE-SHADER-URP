@@ -6,6 +6,8 @@ using UnityEditor;
 using UnityEngine;
 
 
+#if UNITY_EDITOR
+
 /// <summary>
 /// Class for defining custom GUI for Outline shader properties
 /// </summary>
@@ -79,3 +81,5 @@ public class OutlineShaderCustomEditor : ShaderGUI
     }
 
 }
+
+#endif

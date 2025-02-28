@@ -1655,6 +1655,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 681537b4b4cd40e42917d7024bd5d157, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outlineMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &1267276068
 GameObject:
   m_ObjectHideFlags: 0
@@ -2060,7 +2063,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 8c9c94efa1b581146b7ba5eb67007e5b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.66
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8c9c94efa1b581146b7ba5eb67007e5b,
         type: 3}
@@ -2162,6 +2165,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 681537b4b4cd40e42917d7024bd5d157, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outlineMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!64 &1758218416
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2826,6 +2832,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 681537b4b4cd40e42917d7024bd5d157, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outlineMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &2061004709
 GameObject:
   m_ObjectHideFlags: 0

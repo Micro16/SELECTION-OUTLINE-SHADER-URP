@@ -27,7 +27,8 @@ public class MoveAndRotate : MonoBehaviour
     /// </summary>
     void Start()
     {
-
+        /// Zero rotation at start-up
+        transform.rotation = Quaternion.identity;
     }
 
 

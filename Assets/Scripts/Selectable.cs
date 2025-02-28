@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -8,13 +6,31 @@ using UnityEngine;
 /// </summary>
 public class Selectable : MonoBehaviour
 {
-    
+
+    #region Editor 
+
+    public LayerMask outlineMask;
+
+    #endregion
+
+
+    #region Attributes
+
+    private LayerMask m_DefaultMask;
+    private LayerMask m_OutlineMask;
+
+    #endregion
+
+
+    #region Unity Events
+
     /// <summary>
     /// Start is called before the first frame update
     /// </summary>
     void Start()
     {
-        
+        m_DefaultMask = 0;
+        m_OutlineMask = outlineMask;
     }
 
 
@@ -33,14 +49,16 @@ public class Selectable : MonoBehaviour
     private void OnMouseDown()
     {
         /// Change the layer based on its current value
-        if (gameObject.layer == LayerMask.NameToLayer("Default"))
+        if (gameObject.layer == m_DefaultMask)
         {
-            gameObject.layer = LayerMask.NameToLayer("Outline");
+            gameObject.layer = m_OutlineMask;
         }
-        else if (gameObject.layer == LayerMask.NameToLayer("Outline"))
+        else if (gameObject.layer == m_OutlineMask)
         {
-            gameObject.layer = LayerMask.NameToLayer("Default");
+            gameObject.layer = m_DefaultMask;
         }
     }
+
+    #endregion
 
 }

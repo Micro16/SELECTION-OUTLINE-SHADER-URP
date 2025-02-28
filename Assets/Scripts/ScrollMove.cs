@@ -73,9 +73,9 @@ public class ScrollMove : MonoBehaviour
 
 
     /// <summary>
-    /// Allows to set the direction of movement along the Z axis when pressing a button on the UI
+    /// 
     /// </summary>
-    /// <param name="dir">Sets the direction of movement along the Z axis</param>
+    /// <param name="dir"></param>
     public void StartMove(float dir)
     {
         direction = dir;
@@ -83,7 +83,7 @@ public class ScrollMove : MonoBehaviour
 
 
     /// <summary>
-    /// Allows to stop movement along the Z axis when releasing a button on the UI
+    /// 
     /// </summary>
     public void StopMove()
     {

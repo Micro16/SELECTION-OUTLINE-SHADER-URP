@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -9,6 +6,8 @@ using UnityEngine;
 /// </summary>
 public class MoveAndRotate : MonoBehaviour
 {
+
+    #region Editor Properties
 
     /// <summary>
     /// The speed at which the object rotates
@@ -20,15 +19,18 @@ public class MoveAndRotate : MonoBehaviour
     /// The amplitude of the movement
     /// </summary>
     public float movementAmplitude;
-    
-    
+
+    #endregion
+
+
+    #region GameObject Events 
+
     /// <summary>
     /// Start is called before the first frame update
     /// </summary>
     void Start()
     {
-        /// Zero rotation at start-up
-        transform.rotation = Quaternion.identity;
+
     }
 
 
@@ -45,7 +47,9 @@ public class MoveAndRotate : MonoBehaviour
 
         
         /// ... rotate
-        transform.rotation = Quaternion.Euler(0.0f, rotateSpeed * Time.deltaTime, 0.0f) * transform.rotation;
+        transform.rotation = Quaternion.AngleAxis(rotateSpeed * Time.deltaTime, Vector3.up) * transform.rotation;
     }
+
+    #endregion
 
 }

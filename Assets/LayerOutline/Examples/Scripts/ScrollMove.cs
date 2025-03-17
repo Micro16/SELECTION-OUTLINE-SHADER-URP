@@ -2,11 +2,13 @@
 
 
 /// <summary>
-/// Attach this Behaviour to a GameObject to move it along the Z axis using the mouse wheel
+/// Attach this Behaviour to a Camera to move it along the Z axis using the mouse wheel
 /// </summary>
 public class ScrollMove : MonoBehaviour
 {
-    
+
+    #region Editor Properties
+
     /// <summary>
     /// Z coordinate at which the GameObject starts
     /// </summary>
@@ -36,18 +38,50 @@ public class ScrollMove : MonoBehaviour
     /// </summary>
     public float uiButtonSpeed;
 
+    #endregion
+
+
+    #region Attributes
 
     /// <summary>
     /// The direction of movement given by the UI buttons
     /// </summary>
     private float direction;
-    
-    
+
+    #endregion
+
+
+    #region Functions
+
+    /// <summary>
+    /// Allows to move (from another Behaviour) the Camera this Behaviour is attached to 
+    /// </summary>
+    /// <param name="dir">The direction of the movement 1.0 for forward and -1.0f for backward</param>
+    public void StartMove(float dir)
+    {
+        direction = dir;
+    }
+
+
+    /// <summary>
+    /// Allows to stop moving (from another Behaviour) the Camera this Behaviour is attached to
+    /// </summary>
+    public void StopMove()
+    {
+        direction = 0.0f;
+    }
+
+    #endregion
+
+
+    #region GameObject Events
+
     /// <summary>
     /// Start is called before the first frame update
     /// </summary>
     void Start()
     {
+        /// Set position on Z axis 
         Vector3 position = transform.position;
         position.z = zStart;
         direction = 0.0f;
@@ -69,23 +103,6 @@ public class ScrollMove : MonoBehaviour
         transform.position = position;
     }
 
-
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="dir"></param>
-    public void StartMove(float dir)
-    {
-        direction = dir;
-    }
-
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public void StopMove()
-    {
-        direction = 0.0f;
-    }
+    #endregion
 
 }

@@ -114,9 +114,9 @@ MonoBehaviour:
         serializedVersion: 2
         m_Bits: 128
       color: {r: 1, g: 0, b: 0, a: 1}
-      thickness: 10
+      thickness: 20
     - layerMask:
         serializedVersion: 2
         m_Bits: 256
       color: {r: 0, g: 0, b: 1, a: 1}
-      thickness: 10
+      thickness: 20

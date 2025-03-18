@@ -7,7 +7,7 @@ using UnityEngine;
 /// WARNING: Modifies the outline thickness for ALL objects in this layer
 /// </summary>
 [ExecuteAlways]
-public class Scaler : MonoBehaviour
+public class ThicknessChanger : MonoBehaviour
 {
 
     #region Editor Properties

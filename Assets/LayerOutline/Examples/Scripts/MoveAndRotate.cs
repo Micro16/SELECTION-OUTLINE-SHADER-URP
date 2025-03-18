@@ -21,7 +21,7 @@ public class MoveAndRotate : MonoBehaviour
     public float movementAmplitude;
 
     #endregion
-
+    
 
     #region GameObject Events 
 
@@ -40,14 +40,20 @@ public class MoveAndRotate : MonoBehaviour
     void Update()
     {
         /// Move and ...
-        float y =  Mathf.Sin(Time.realtimeSinceStartup) * movementAmplitude;
-        Vector3 position = transform.position;
-        position.y = y;
-        transform.position = position;
-
+        if (movementAmplitude != 0)
+        {
+            float y = Mathf.Sin(Time.realtimeSinceStartup) * movementAmplitude;
+            Vector3 position = transform.position;
+            position.y = y;
+            transform.position = position;
+        }
         
+
         /// ... rotate
-        transform.rotation = Quaternion.AngleAxis(rotateSpeed * Time.deltaTime, Vector3.up) * transform.rotation;
+        if (rotateSpeed != 0)
+        {
+            transform.rotation = Quaternion.AngleAxis(rotateSpeed * Time.deltaTime, Vector3.up) * transform.rotation;
+        }
     }
 
     #endregion

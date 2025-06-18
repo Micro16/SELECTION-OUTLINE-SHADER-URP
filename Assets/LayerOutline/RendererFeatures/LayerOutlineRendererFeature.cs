@@ -326,12 +326,12 @@ public class LayerOutlineRendererFeature : ScriptableRendererFeature
 
         /// Instantiating a InitLayerMask pass
         m_InitLayerMask = new InitLayerMask();
-        m_InitLayerMask.renderPassEvent = RenderPassEvent.BeforeRenderingPostProcessing;
+        m_InitLayerMask.renderPassEvent = RenderPassEvent.AfterRenderingOpaques;
 
 
         /// Instantiating a InitLayerOutline pass
         m_InitLayerOutline = new InitLayerOutline();
-        m_InitLayerOutline.renderPassEvent = RenderPassEvent.BeforeRenderingPostProcessing;
+        m_InitLayerOutline.renderPassEvent = RenderPassEvent.AfterRenderingOpaques;
 
         #endregion
 
@@ -360,7 +360,7 @@ public class LayerOutlineRendererFeature : ScriptableRendererFeature
 
             /// ... instantiation of a DrawLayerMask pass
             m_DrawLayerMask[i] = new DrawLayerMask(drawLayerMaskSettings);
-            m_DrawLayerMask[i].renderPassEvent = RenderPassEvent.BeforeRenderingPostProcessing;
+            m_DrawLayerMask[i].renderPassEvent = RenderPassEvent.AfterRenderingOpaques;
 
 
             /// ... creating and initializing settings for a DrawLayerOutline pass
@@ -374,7 +374,7 @@ public class LayerOutlineRendererFeature : ScriptableRendererFeature
 
             /// ... instantiating a DrawLayerOutline pass
             m_DrawLayerOutline[i] = new DrawLayerOutline(drawLayerOutlineSettings);
-            m_DrawLayerOutline[i].renderPassEvent = RenderPassEvent.BeforeRenderingPostProcessing;
+            m_DrawLayerOutline[i].renderPassEvent = RenderPassEvent.AfterRenderingOpaques;
         }
 
         #endregion

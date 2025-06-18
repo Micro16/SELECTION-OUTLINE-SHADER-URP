@@ -126,7 +126,7 @@ public class DrawLayerMask : ScriptableRenderPass
 
 
         /// Initializing filtering settings with the layer to which the objects to be drawn belong
-        m_FilteringSettings = new FilteringSettings(RenderQueueRange.all, settings.selectionLayer);
+        m_FilteringSettings = new FilteringSettings(RenderQueueRange.opaque, settings.selectionLayer);
 
 
         /// Initializing shader tags list
@@ -177,7 +177,7 @@ public class DrawLayerMask : ScriptableRenderPass
 
 
         /// Use m_MaskMaterial to draw masks
-        drawSettings.overrideMaterial = m_CustomMaterial;
+        drawSettings.overrideMaterial = m_MaskMaterial; /*m_CustomMaterial;*/
 
 
         /// Create renderer list parameters from cull results, drawing settings and filtering settings
